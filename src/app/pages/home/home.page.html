@@ -1,0 +1,94 @@
+<ion-header>
+    <img src="../../../assets/imgs/LogoEvoluaLogo.png" class="imgmenu1">
+    <img src="../../../assets/imgs/LogoPrincipalLetra.png" class="imgmenu2">
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="!products.length"> <!-- Se não tiver nenhum produto na lista -->
+    <ion-item *ngFor="let item of [0, 1, 2, 3]">
+      <ion-avatar slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-avatar>
+      <ion-label>
+        <h3><ion-skeleton-text animated style="width: 20%"></ion-skeleton-text></h3>
+        <p><ion-skeleton-text animated style="width: 70%"></ion-skeleton-text></p>
+        <p><ion-skeleton-text animated style="width: 60%"></ion-skeleton-text></p>
+        <p><ion-skeleton-text animated style="width: 40%"></ion-skeleton-text></p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- <ion-list>
+    <ion-item-sliding *ngFor="let product of products">
+      <ion-item button [routerLink]="['/details', product.id]">
+        <ion-avatar slot="start">
+          <img [src]="product.picture">
+        </ion-avatar>
+
+        <ion-label>
+          <p>{{ product.name }}</p>
+          <p>{{ product.description }}</p>
+          <p>{{ product.createdAt | date: 'short' }}</p>
+        </ion-label>
+
+        <ion-note color="success" slot="end" *ngIf="product.price">
+          {{ product.price | currency: 'BRL' }}
+        </ion-note>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="deleteProduct(product.id)">
+          <ion-icon slot="top" name="trash"></ion-icon>Excluir
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding> -->
+
+    <ion-card *ngFor="let product of products">
+        <div button [routerLink]="['/details', product.id]">
+            <img [src]="product.picture" style="width: 100%;">
+          <ion-card-header>
+            <ion-item>
+              <ion-card-title>{{ product.name }}</ion-card-title>
+            </ion-item>
+              <ion-card-subtitle>Data de criação: {{ product.createdAt | date: 'short' }}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            {{ product.descricao }}
+          </ion-card-content>
+          
+                <!-- <ion-grid>
+                  <ion-row>
+                    <ion-col size="6">
+                      
+                    </ion-col>
+                    <ion-col size="6"> -->
+                      <ion-button color="success" expand="full" *ngIf="product.price">
+                        {{ product.price | currency: 'BRL' }}
+                      </ion-button>
+                    <!-- </ion-col> -->
+                  <!-- </ion-row>
+                </ion-grid> -->
+        </div>
+        <ion-button color="danger" expand="block" (click)="deleteProduct(product.id)" fill="solid">
+          <ion-icon slot="" name="trash"></ion-icon>
+          Excluir
+        </ion-button>
+    </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-button (click)="logout()" color="danger" expand="block">Sair</ion-button>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-button routerLink="/details" expand="block">Add produto</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,72 @@
+<ion-content class="swiper-no-swiping">
+  <div class="container top" [hidden]="keyboard.isVisible">
+          <img src="../../../assets/imgs/LogoPrincipal.png" class="logo">
+
+    <ion-segment (ionChange)="segmentChanged($event)" value="login" class="zi">
+      <ion-segment-button value="login">
+        <ion-label class="ss" color="light">Login</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="register">
+        <ion-label class="ss" color="light">Cadastro</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+  </div>
+
+  <ion-slides>
+    <ion-slide>
+      <div class="slide-inner ion-padding">
+        <span>Login:</span>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-label position="floating" color="light">E-mail</ion-label>
+          <ion-input type="email" [(ngModel)]="userLogin.email"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-label position="floating" color="light">Senha</ion-label>
+          <ion-input type="password" [(ngModel)]="userLogin.password"></ion-input>
+        </ion-item>
+
+        <ion-button class="ion-margin-top" (click)="login()" color="secondary" expand="block">Entrar</ion-button>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide-inner ion-padding">
+        <span>Cadastro:</span>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-label position="floating" color="light">Nome</ion-label>
+          <ion-input type="text" [(ngModel)]="nome"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-label position="floating" color="light">E-mail</ion-label>
+          <ion-input type="email" [(ngModel)]="userRegister.email"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-label position="floating" color="light">Senha</ion-label>
+          <ion-input type="password" [(ngModel)]="userRegister.password"></ion-input>
+        </ion-item>
+
+        <ion-button class="ion-margin-top" (click)="register()" color="secondary" expand="block">Cadastrar</ion-button>
+      </div>
+    </ion-slide>
+
+  </ion-slides>
+
+  <div class="backpaper">
+    <div class="container button ion-text-center" [hidden]="keyboard.isVisible">
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer class="ion-text-center" [hidden]="keyboard.isVisible">
+  <ion-toolbar class="ionToolbar" color="secondary">
+    <ion-text color="light">
+      Escola evolua: R. Osasco, 226 - Jardim Paulista, Sumaré - SP, 13171-090. Tell: (19) 3873-9976
+    </ion-text>
+  </ion-toolbar>
+</ion-footer>

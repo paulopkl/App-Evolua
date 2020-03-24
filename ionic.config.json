@@ -1,5 +1,7 @@
 {
   "name": "Evolua",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

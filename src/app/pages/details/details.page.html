@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title class="text-center">Produto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="product.name" placeholder="Nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="product.descricao" placeholder="Descrição"></ion-input>
+    </ion-item>
+    <!-- <ion-item>
+      <ion-button (click)="openGalery()">Escolher Foto</ion-button>
+
+      <ion-label>Progresso de upload: {{ uploadPercent | async }}</ion-label>
+      <ion-label>URL de download: {{ downloadUrl | async }}</ion-label>
+    </ion-item> -->
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="product.picture" placeholder="foto"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="product.price" placeholder="Preço"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <!-- <img [src]="downloadUrl | async" *ngIf="downloadUrl | async"> -->
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="saveProduct()" expand="block">Salvar Produto</ion-button>
+  </ion-toolbar>
+</ion-footer>
