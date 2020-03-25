@@ -8,18 +8,18 @@ basta dar um <code>npm i</code> para instalar todas as depêndencias
 
 <h1>Página de Login do App:<h1>
 
-<img src="src/assets/imgs/Login.png">
+<img src="src/assets/imgs/Login.PNG">
 
 <h1>Página de Cadastro do App:<h1>
 
-<img src="src/assets/imgs/Cadastro.png">
+<img src="src/assets/imgs/Cadastro.PNG">
 
 <h1>Página Home do App:<h1>
 
-<img src="src/assets/imgs/HomePage.png">
+<img src="src/assets/imgs/HomePage.PNG">
 
 <h1>Página para editar os Produtos no Database do App:<h1>
 
-<img src="src/assets/imgs/EditProduct.png">
+<img src="src/assets/imgs/EditProduct.PNG">
 
 <hr />
