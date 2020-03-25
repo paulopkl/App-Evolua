@@ -22,4 +22,8 @@ Basta dar um <code>npm i</code> para instalar todas as depêndencias.
 
 <img src="src/assets/imgs/EditProduct.PNG">
 
+<h1>Para gerar o .apk do projeto</h1>
+
+Digite <code>ionic cordova build --release android</code> espere um pouco e será gerado um arquivo.apk com o PATH que o terminal informar.
+
 <hr />
