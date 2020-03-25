@@ -8,7 +8,7 @@ basta dar um <code>npm i</code> para instalar todas as depêndencias
 
 <h1>Página de Login do App:<h1>
 
-<img src="/src/assets/imgs/Login.png">
+<img src="src/assets/imgs/Login.png">
 
 <h1>Página de Cadastro do App:<h1>
 
