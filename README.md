@@ -1,6 +1,6 @@
 <h1>Aplicativo desenvolvido como projeto de conclusão de curso.</h1>
 
-Aplicativo Mobile Android, sobre venda de Cursos feito a patir do Ionic 4 com CRUD no Firebase. Este aplicativo foi um projeto desenvolvido como conclusão do curso Angular/Ionic/Cordova na escola Evolua.
+Aplicativo Mobile Android, sobre venda de Cursos feito a partir do Ionic 4 com CRUD no Firebase. Este aplicativo foi um projeto desenvolvido como conclusão do curso (Angular/Ionic/Cordova) na escola Evolua.
 
 <hr />
 <h1>Adicione as Depências</h1>
